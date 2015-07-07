@@ -1,0 +1,10 @@
+---
+applications:
+- name: event-viewer
+  memory: 64m
+  random-route: true
+  services:
+   - uaa
+   - cloud_controller
+
+  
