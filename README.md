@@ -14,7 +14,7 @@ uaac client add event-viewer --scope uaa.none --authorized_grant_types "authoriz
 In an untested theory you can give your client_id a grant other than client_credentials, but I've only tested this and the code assumes that the UAA URI will return 
 json which contains an `access_token` that it will then insert as a `bearer` token in future requests to the CF CLI. It also assumes uaa provides an `expires_in` field that it will use to grab a new token.
 
-`cf cups uaa -p '{ "uri": "https://uaa.10.244.0.34.xip.io/oauth/token?grant_type=client_credentials", "client_id": "oohimtelling", "client_secret": "oohimtelling" }'`
+`cf cups uaa -p '{ "uri": "https://uaa.10.244.0.34.xip.io/oauth/token?grant_type=client_credentials", "client_id": "event-viewer", "client_secret": "event-viewer" }'`
 
 `cf cups cloud_controller -p '{ "uri": "https://api.10.244.0.34.xip.io" }'`
 
